@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	#canvas{
+		width: 100px;
+		height: 100px;
+	}
+</style>
+<body>
+	<canvas id="canvas" width="200" height="200" style="border: 1px red solid"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var can=document.getElementById('canvas');
+		var context=can.getContext('2d'); 
+        
+        context.fillStyle='pink';
+		context.fillRect(0,0,100,100);//填充(x,y,width,height) 
+		context.clearRect(25, 25, 50, 50);//清空指定位置的
+
+	}
+</script>
+</html>

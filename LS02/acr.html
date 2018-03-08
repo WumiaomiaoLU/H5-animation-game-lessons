@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+        <canvas id="canvas" width="500" height="500" style="border:solid #ccc 2px">
+            Your browser does not support the HTML 5 Canvas.
+        </canvas>
+    </div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var thecanvas=document.getElementById('canvas');
+		var context=thecanvas.getContext('2d');
+		context.width=5;
+		context.strokeStyle='blue';
+		
+		context.beginPath();
+		context.arc(100,100,50,Math.PI,Math.PI*1.5);
+		context.stroke();
+
+		context.beginPath();
+		context.arc(100,100,50,Math.PI*0.5,0,true);
+		context.stroke();
+	}
+</script>
+</html>

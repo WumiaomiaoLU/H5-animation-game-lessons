@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<canvas id="canvas" width="500" height="500" style="border:2px black solid"></canvas>
+</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var thecanvas=document.getELementById('canvas');
+		var context=thecanvas.getContext('2d');
+
+	    // function drawStar(ctx) {
+     //        ctx.star(2,0,3,4,4,6,4,3,1,4);
+     //    }
+     //    drawStar(context);
+     //    //思考如何扩展context，使之具有context.strokeTriangle; context.fillTriangle 
+     //    CanvasRenderingContext2D.prototype.star = function (x1,y1,x2,y2,x3,y3,x4,y4,x5,y5) {
+     //        //alert("扩展context方法triAngle");
+     //        //console.log(this);
+     //        this.moveTo(x1,y1);
+     //        this.lineTo(x2,y2);
+     //        this.lineTo(x3,y3);
+     //        this.lineTo(x4,y4);
+     //        this.lineTo(x5,y5);
+     //        this.closePath();
+     //        this.stroke();
+     //    }
+     function line(){
+	    var grd = context.createLinearGradient( 
+				0, 0,10 ,10 );
+	    context.lineWidth=3;
+			grd.addColorStop( 0 , pink);
+			grd.addColorStop( 1, red);
+		    context.fillStyle = grd;
+
+		}
+		line();
+	}
+
+</script>
+</html>

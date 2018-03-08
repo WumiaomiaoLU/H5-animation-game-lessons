@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<canvas id="canvas" width="500" height="500" style="border:solid blue 2px;"></canvas>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var theCanvas = document.getElementById('canvas');
+        var context = theCanvas.getContext('2d'); 
+        
+        function drawCurve() {
+
+                context.beginPath();
+                context.moveTo(0,10);
+                context.quadraticCurveTo(100,125,0,50);
+
+                context.stroke();
+                context.fill();
+            }
+            drawCurve();
+	}
+</script>
+</html>
