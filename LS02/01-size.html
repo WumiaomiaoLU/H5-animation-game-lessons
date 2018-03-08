@@ -3,7 +3,24 @@
 <head>
 	<title>元素大小及绘图表面</title>
 </head>
+<style type="text/css">
+	#canvas{
+		width: 600px;
+		height: 600px;
+	}
+</style>
+<!-- 在canvas标签中设置的宽高是绘图的大小，但是最终要呈现在css中设置的大小中
+若没设置css，则 按照canvas的大小。若比例不一致则会产生伸缩现象-->
 <body>
-	<canvas id="canvas" width="500" height="500" style="border: 1px blue solid"></canvas>
+	<canvas id="canvas" width="300" height="200" style="border: 1px blue solid"></canvas>
 </body>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var can=document.getElementById('canvas');
+		var context=can.getContext('2d');
+
+		context.fillRect(0,0,100,100);//显示在600*600中，矩形200*300
+	}
+</script>
 </html>
