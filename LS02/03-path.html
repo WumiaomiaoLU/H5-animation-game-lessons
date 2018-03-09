@@ -4,47 +4,50 @@
 	<title></title>
 </head>
 <body>
-	<canvas id="canvas"></canvas>
+	<canvas id="canvas" width="500" height="500" style="border: 1px green solid"></canvas>
+	<!-- 要注意设置canvas的宽高，不写则默认为300*150，画图超出的范围则不会显示 -->
 </body>
 <script type="text/javascript">
 	window.onload=function(){
 		var canvas=document.getElementById('canvas');
 		var context=canvas.getContext('2d');
 
-		// context.strokeStyle='red';
-		// context.lineWidth=2;
+		context.strokeStyle='red';
+		context.lineWidth=2;
 
-		// context.beginPath();
-		// context.moveTo(10,0);
-		// context.lineTo(10,100);
-		// context.lineTo(80,100);
-		// context.stroke();
-
-		// context.beginPath();
-		// context.strokeStyle='blue';
-		// context.lineWidth=2;
-		// context.moveTo(10,150);
-		// context.lineTo(10,250);
-		// context.lineTo(80,250);
-		// context.closePath();
-		// context.stroke();
 		context.beginPath();
-		 context.strokeStyle = 'blue';
-            context.lineWidth = 5;
-            context.moveTo(10,10);
-            context.lineTo(200,10);
-            context.lineTo(200,120);
-            context.closePath();//头尾是否连接
-            context.stroke();
+		context.moveTo(10,0);
+		context.lineTo(10,100);
+		context.lineTo(80,100);
+		context.stroke();
 
-            // context.beginPath(); //有beginPath和没有的区别
-            // context.strokeStyle = 'red';
-            // context.lineWidth = 10;
-            // context.moveTo(10,200);//
-            // context.lineTo(200,200);
-            // context.lineTo(200,300);
-            // context.closePath();
-            // context.stroke();
+		context.beginPath();
+		context.strokeStyle='blue';
+		context.lineWidth=2;
+		context.moveTo(10,150);
+		context.lineTo(10,250);
+		context.lineTo(80,250);
+		context.closePath();
+		context.stroke();
+
+
+			// context.beginPath();
+		 // 	context.strokeStyle = 'blue';
+   //          context.lineWidth = 5;
+   //          context.moveTo(10,10);
+   //          context.lineTo(200,10);
+   //          context.lineTo(200,120);
+   //          //context.closePath();//头尾是否连接
+   //          context.stroke();
+
+   //          context.beginPath(); //有beginPath和没有的区别
+   //          context.strokeStyle = 'red';
+   //          context.lineWidth = 10;
+   //          context.moveTo(10,200);//
+   //          context.lineTo(200,200);
+   //          context.lineTo(200,300);
+   //          context.closePath();
+   //          context.stroke();
 	}
 </script>
 </html>
