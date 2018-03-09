@@ -21,8 +21,17 @@
 		context.arc(100,100,50,Math.PI,Math.PI*1.5);
 		context.stroke();
 
-		context.beginPath();
+		context.beginPath();//决定路径是否首尾相连
 		context.arc(100,100,50,Math.PI*0.5,0,true);
+		//(x,y,开始角度点,结束角度点,半径，顺逆时针)最后一项不写则为顺时针，写true为逆时针
+		context.stroke();
+
+		context.beginPath();
+		context.strokeStyle='red';
+		context.fillStyle="yellow";
+		context.arc(200,200,50,Math.PI*1.5,Math.PI*0.5,true);
+		context.closePath();
+		context.fill();
 		context.stroke();
 	}
 </script>
