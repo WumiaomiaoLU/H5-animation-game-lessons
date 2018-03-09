@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>样式</title>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500" style="border: 1px blue solid"></canvas>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+	var canvas=document.getElementById('canvas');
+	var context=canvas.getContext('2d');
+
+	context.beginPath();
+	context.lineWidth=15;
+	context.strokeStyle='pink';
+	context.lineCap='round';//圆形端点
+
+	context.moveTo(10,10);
+	context.lineTo(100,10);
+	context.stroke();
+		
+	context.beginPath();
+	context.lineWidth=15;
+	context.strokeStyle='yellow';
+	context.lineCap="square";//方形端点
+
+	context.moveTo(10,50);
+	context.lineTo(150,50);
+	context.stroke();
+
+	context.beginPath();
+	context.lineWidth=15;
+	context.strokeStyle='green';
+	context.lineCap="butt";//默认端点
+
+	context.moveTo(10,100);
+	context.lineTo(200,100);
+	context.stroke();
+}
+	
+
+
+</script>
+</html>
