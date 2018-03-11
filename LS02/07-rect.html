@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>矩形</title>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500" style="border:solid #ccc 2px"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+
+		context.strokeStyle="yellow";
+		context.fillStyle="pink";
+
+		context.moveTo(10,10);
+        context.lineTo(200,10);
+        context.lineTo(200,120);
+        context.lineTo(10,120);
+        context.stroke();
+        context.fill();
+        context.restore();
+		
+		
+	}
+</script>
+</html>
