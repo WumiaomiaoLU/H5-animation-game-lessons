@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>矩形</title>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500" style="border:solid #ccc 2px"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+
+		context.strokeStyle="yellow";
+		context.fillStyle="pink";
+
+		context.lineWidth=5;
+
+		context.ellipse(100,100,50,75,0,1.5*Math.PI,2*Math.PI,false);//(圆点x,圆点y,a,b,倾斜角度,起始点角度,终点角度,false-顺时针true-逆时针)
+		context.stroke();
+		
+		
+	}
+</script>
+</html>
