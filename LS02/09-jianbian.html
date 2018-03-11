@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" style="border: 2px #ccc solid"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		var gr = context.createLinearGradient(20, 250, 300, 300);
+        context.lineWidth = 5;
+        gr.addColorStop(0, 'rgb(255,0,0)');
+        gr.addColorStop(0.5, 'rgb(0,255,0)');
+        gr.addColorStop(1, 'rgb(255,0,0)');
+
+        
+        context.strokeStyle = gr;
+        context.moveTo(20,20);
+        context.lineTo(300,20);
+        //context.lineTo(150,300);
+        context.stroke();
+        context.strokeRect(20, 50, 280, 50);
+	}
+</script>
+</html>
